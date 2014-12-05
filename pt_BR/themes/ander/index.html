@@ -18,29 +18,29 @@
     
 
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://surbitcoin.github.io/exchange/pt_BR/themes/ander/index.html">
-  <meta property="og:image" content="https://surbitcoin.github.io/exchange/pt_BR/assets/exchange_logos/surbitcoin_social_network_share.png">
+  <meta property="og:url" content="https://surbitcoin.com/exchange/pt_BR/themes/ander/index.html">
+  <meta property="og:image" content="https://surbitcoin.com/exchange/pt_BR/assets/exchange_logos/surbitcoin_social_network_share.png">
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="/exchange/pt_BR/assets/exchange_logos/surbitcoin_favicon.ico">
   <link rel="icon" href="/exchange/pt_BR/assets/exchange_logos/surbitcoin_favicon.ico" type="image/x-icon">
 
   <!-- Feed -->
-  <link rel="alternate" type="application/rss+xml" href="https://surbitcoin.github.io/exchange/pt_BR/feed.xml">
+  <link rel="alternate" type="application/rss+xml" href="https://surbitcoin.com/exchange/pt_BR/feed.xml">
 
   <meta charset="utf-8">
 
-  <link rel="canonical" href="https://surbitcoin.github.io/exchange/pt_BR/themes/ander/index.html"/>
+  <link rel="canonical" href="https://surbitcoin.com/exchange/pt_BR/themes/ander/index.html"/>
   <script type="text/javascript" src="//apis.google.com/js/plusone.js"></script>
 
-  <link href="https://surbitcoin.github.io/exchange/pt_BR/assets/themes/default/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://surbitcoin.com/exchange/pt_BR/assets/themes/default/css/font-awesome.min.css" rel="stylesheet">
 
   
   <!--link href="/assets/themes/default/css/Dialog.css" rel="stylesheet"-->
-  <link href="https://surbitcoin.github.io/exchange/pt_BR/assets/themes/default/css/fuelux.css" rel="stylesheet">
-  <link href="https://surbitcoin.github.io/exchange/pt_BR/assets/themes/default/css/style-new.css?v=66f13c1" rel="stylesheet">
-  <link href="https://surbitcoin.github.io/exchange/pt_BR/assets/themes/ander/css/blinktrade.css?v=66f13c1" rel="stylesheet">
-  <script data-cfasync="false" src="https://surbitcoin.github.io/exchange/pt_BR/assets/js/bitex_app_blink_trade.compiled.pt_BR.ander.js?v=66f13c1" type="text/javascript"></script>
+  <link href="https://surbitcoin.com/exchange/pt_BR/assets/themes/default/css/fuelux.css" rel="stylesheet">
+  <link href="https://surbitcoin.com/exchange/pt_BR/assets/themes/default/css/style-new.css?v=12a9ced" rel="stylesheet">
+  <link href="https://surbitcoin.com/exchange/pt_BR/assets/themes/ander/css/blinktrade.css?v=12a9ced" rel="stylesheet">
+  <script data-cfasync="false" src="https://surbitcoin.com/exchange/pt_BR/assets/js/bitex_app_blink_trade.compiled.pt_BR.ander.js?v=12a9ced" type="text/javascript"></script>
   
 </head>
 <body class=" ws-not-connected bitex-not-logged active-view-start ">
@@ -64,12 +64,31 @@
         </a>
         
         <!-- /.logo -->
+
+        <div id="js--head-btn" class="head__btn">
+            <img src="/assets/themes/default/img/head-btn.png" />
+        </div>
       </div>
+
+      <script type="text/javascript">
+          var headBtn = document.getElementById('js--head-btn');
+
+          headBtn.onclick = function() {
+              var menu = document.getElementById('menu'),
+                  menuClass = menu.getAttribute("class");
+
+            if (menuClass !== "head__nav") {
+                menu.className = "head__nav";
+            } else {
+                menu.className = "head__nav head__nav--open";
+            }
+          }
+      </script>
 
       
       <div class="layout__item eight-tenths portable--one-whole">
         <!-- .head__nav -->
-        <div class="head__nav">
+        <div id="menu" class="head__nav">
           <!-- .layout -->
           <div class="layout layout--full">
             <nav class="layout__item eight-tenths portable--one-whole">
@@ -128,22 +147,28 @@
                   </a>
                 </li>
                 <li class="bitex-display-if-logged">
-                  <a href="#trading" title="Buy or Sell" data-switch-view="trading">
+                  <a href="#trading" title="Comprar ou Vender" data-switch-view="trading">
                     <i class="icon-random"></i> Comprar ou Vender
                   </a>
                 </li>
                 <li class="bitex-display-if-logged">
-                  <a href="#ledger" title="Ledger" data-switch-view="ledger">
+                  <a href="#algotrading" title="Algo Trading" data-switch-view="algotrading">
+                    <i class="icon-cog"></i> Algo Trading
+                  </a>
+                </li>
+
+                <li class="bitex-display-if-logged">
+                  <a href="#ledger" title="Livro contábil" data-switch-view="ledger">
                     <i class="icon-list"></i> Livro contábil
                   </a>
                 </li>
                 <li>
-                  <a data-switch-view="market" href="#market" title="Market">
+                  <a data-switch-view="market" href="#market" title="Mercado">
                     <i class="icon-bar-chart"></i> Mercado
                   </a>
                 </li>
                 <li class="bitex-hide-if-logged">
-                  <a data-switch-view="signup" href="#signup" title="Signup">
+                  <a data-switch-view="signup" href="#signup" title="Registrar">
                     <i class="icon-signin"></i> Registrar
                   </a>
                 </li>
@@ -156,17 +181,17 @@
               <ul class="head__nav-right">
                 <li >
                   <span>PT_BR</span>
-                  <ul class="head-dropdown" >
+                  <ul class="head-dropdown head-dropdown--right">
                   
                     
                       
-                        <li><a tabindex="-1" href="https://surbitcoin.github.io/exchange/themes/ander/">ES</a></li>
+                        <li><a tabindex="-1" href="https://surbitcoin.com/exchange/themes/ander/">ES</a></li>
                       
                     
                   
                     
                       
-                        <li><a tabindex="-1" href="https://surbitcoin.github.io/exchange/en_US/themes/ander/">EN_US</a></li>
+                        <li><a tabindex="-1" href="https://surbitcoin.com/exchange/en_US/themes/ander/">EN_US</a></li>
                       
                     
                   
@@ -175,26 +200,23 @@
                   </ul>
                 </li>
 
-                <li class="bitex-hide-if-logged">
-                  <a data-switch-view="signin" href="#signin" title="Login">
-                    <i class="icon-power-off"></i> Login
-                  </a>
-                </li>
-
-
                 <li class="bitex-hide-if-ws-connected">
                     <a href="#" id="id_button_connect_ws">
                         <i class="icon-white icon-repeat"></i> Connect
                     </a>
                 </li>
 
-                <li class="bitex-display-if-logged">
+                <li class="head__nav-last-item bitex-hide-if-logged">
+                  <a data-switch-view="signin" href="#signin" title="Login">
+                    <i class="icon-power-off"></i> Login
+                  </a>
+                </li>
+
+                <li class="head__nav-last-item bitex-display-if-logged">
                   <a href="javascript:location.reload()">
                     <i class="icon-power-off"></i> Sair
                   </a>
                 </li>
-
-
               </ul>
               <!-- /.head__nav-right -->
             </nav>
@@ -245,18 +267,18 @@
       <form class="home-form" action="">
         <div class="layout layout--half layout--bottom">
           <!-- .layout__item -->
-          <div class="layout__item one-whole lap--eight-tenths desk--eight-tenths">
+          <div class="layout__item one-whole desk--eight-tenths">
             <!-- .layout -->
             <div class="layout layout--quarter">
               <!-- .layout__item -->
-              <div class="layout__item one-whole lap--six-tenths desk--six-tenths">
+              <div class="layout__item one-whole desk--six-tenths">
                 <label for="id_landing_username" class="home-form__label">Nome de usuário:</label>
                 <input class="home-form__input input input--large input--full" id="id_landing_username" type="text" size="30">
               </div>
               <!-- /.layout__item -->
 
               <!-- .layout__item -->
-              <div class="layout__item one-whole lap--four-tenths desk--four-tenths">
+              <div class="layout__item one-whole desk--four-tenths">
                 <label for="id_landing_password" class="home-form__label">Senha:</label>
                 <input class="home-form__input input input--large input--full" id="id_landing_password" type="password" size="30">
               </div>
@@ -267,8 +289,8 @@
           <!-- /.layout__item -->
 
           <!-- .layout__item -->
-          <div class="layout__item one-whole lap--two-tenths desk--two-tenths">
-            <button type="button" id="id_landing_signin" class="btn btn--positive btn--full">Entrar</button>
+          <div class="layout__item one-whole desk--two-tenths">
+            <button type="submit" id="id_landing_signin" class="btn btn--positive btn--full">Entrar</button>
           </div>
           <!-- /.layout__item -->
         </div>
@@ -329,7 +351,7 @@
   <div id="signin" class="page bitex-view">
     <!-- .page__head -->
     <header class="page__head">
-      <h1 class="page__title bitex-view-title">Login</h1>
+      <h1 class="page__title beta bitex-view-title">Login</h1>
     </header>
     <!-- /.page__head -->
 
@@ -340,15 +362,22 @@
       </p>
 
       <form accept-charset="UTF-8" action="" method="post">
-        <label for="id_username">Nome de usuário</label>
-        <input autocapitalize="off" autocorrect="off" id="id_username" name="username" type="text" placeholder="">
-        <label for="id_password">Senha</label>
-        <input id="id_password"  placeholder="" name="password" type="password">
+        <ul class="login">
+          <li>
+            <label class="login__label" for="id_username">Nome de usuário:</label>
+            <input class="input input--full" autocapitalize="off" autocorrect="off" id="id_username" name="username" type="text" placeholder="">
+          </li>
 
-        <p>
-          <a href="forgot_password" data-switch-view="forgot_password">Esqueceu a sua senha??</a>
-        </p>
-        <input id="id_btn_login"  class="btn btn-primary" name="commit" type="submit" value="Entrar">
+          <li>
+            <label class="login__label" for="id_password">Senha:</label>
+            <input class="input input--full" id="id_password"  placeholder="" name="password" type="password">
+            <a class="login__remember" href="forgot_password" data-switch-view="forgot_password">Esqueceu a sua senha?</a>
+          </li>
+
+          <li>
+            <input id="id_btn_login"  class="login__btn btn btn--primary" name="commit" type="submit" value="Entrar">
+          </li>
+        </ul>
       </form>
     </div>
     <!-- /.page__body -->
@@ -364,85 +393,71 @@
     <!-- /.page__head -->
 
     <!-- .page__body -->
-    <div class="page__body">
+    <div class="page__body bitex-view-content">
       <p>Já possui registro? <a href="#" data-switch-view="signin">Entrar</a>.</p>
 
-      <div class="bitex-view-content">
         <form accept-charset="UTF-8" class="form-horizontal" id="new_user" method="post">
-          <div class="control-group">
-            <label class="control-label">Nome de usuário</label>
-            <div class="controls">
-              <input id="id_signup_username" name="Username" size="30" type="text" placeholder="">
-            </div>
-          </div>
+            <!-- .register -->
+            <div class="register">
+                <!-- .register-form -->
+                <ul class="register-form">
+                    <li>
+                        <label class="register__label">Nome de usuário:</label>
+                        <input id="id_signup_username" class="input input--full" name="Username" size="30" type="text" placeholder="">
+                    </li>
 
-          <div class="control-group">
-            <label class="control-label">Email</label>
-            <div class="controls">
-              <input id="id_signup_email" name="Email" size="30" type="text" placeholder="ex.: jose@email.com">
-            </div>
-          </div>
+                    <li>
+                        <label class="register__label">Email:</label>
+                        <input id="id_signup_email" class="input input--full" name="Email" size="30" type="text" placeholder="ex.: jose@email.com">
+                    </li>
 
-          <div class="control-group">
-            <label class="control-label">Senha</label>
-            <div class="controls">
-              <input id="id_signup_password" name="Password" size="30" type="password">
-              <p class="help-block">Pelo menos 8 letras</p>
-            </div>
-          </div>
+                    <li>
+                        <label class="register__label">Senha:</label>
+                        <input id="id_signup_password" class="input input--full" name="Password" size="30" type="password">
+                        <div class="register__small">Pelo menos 8 letras</div>
+                    </li>
 
-          <div class="control-group">
-            <label class="control-label">Confirme a sua senha</label>
-            <div class="controls">
-              <input id="id_signup_password2" name="Password2" size="30" type="password">
-            </div>
-          </div>
+                    <li>
+                        <label class="register__label">Confirme a sua senha:</label>
+                        <input id="id_signup_password2" class="input input--full" name="Password2" size="30" type="password">
+                    </li>
 
-          <div class="control-group" style="">
-            <label class="control-label">País</label>
-            <div class="controls">
-              <select id="id_signup_country" name="country"></select>
-            </div>
-          </div>
+                    <li>
+                        <label class="register__label">País:</label>
+                        <select id="id_signup_country" class="select--full" name="country"></select>
+                    </li>
 
-          <div id="id_signup_state_group" class="control-group" style="display: none">
-            <label class="control-label">Estado ou Província</label>
-            <div class="controls">
-              <select id="id_signup_state" name="state"></select>
-            </div>
-          </div>
+                    <li id="id_signup_state_group" style="display: none">
+                        <label class="register__label">Estado ou Província:</label>
+                        <select id="id_signup_state" class="select--full" name="state"></select>
+                    </li>
 
-          <div class="control-group" style="display: none;">
-            <label class="control-label">Corretor</label>
-            <div class="controls">
-              <select id="id_signup_broker" name="broker"></select>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label"></label>
-            <div class="controls">
-              <div id="signup_broker_details"></div>
-            </div>
-          </div>
+                    <li style="display: none;">
+                        <label class="register__label">Corretor</label>
+                        <select id="id_signup_broker" name="broker"></select>
+                    </li>
 
-          <div class="control-group">
-            <label class="control-label">Termos de serviço  </label>
-            <div class="controls">
-              <label class="checkbox">
-                <input id="user_agreed_tos" name="" type="checkbox" checked>Estou de acordo com os termos de serviço
-              </label>
+                    <li id="signup_broker_details"></li>
+
+                    <li>
+                        <label class="register__label">Termos de serviço:</label>
+                        <div>
+                            <input id="user_agreed_tos" name="" type="checkbox" checked> Estou de acordo com os termos de serviço
+                        </div>
+                    </li>
+                </ul>
+                <!-- /.register-form -->
+
+                <!-- .register__action -->
+                <div class="register__action">
+                    <button id="id_btn_signup" class="register__btn btn btn--primary">Registrar</button>
+                </div>
+                <!-- /.register__action -->
             </div>
-          </div>
+            <!-- /.register -->
         </form>
-
-        <div class="control-group">
-          <div class="controls">
-            <button id="id_btn_signup" class="btn btn-primary">Registrar</button>
-          </div>
-        </div>
       </div>
       <!-- /.page__body -->
-    </div>
   </div>
   <!-- /#signup -->
 
@@ -457,13 +472,18 @@
     <!-- .page__body -->
     <div class="page__body bitex-view-content">
       <form accept-charset="UTF-8" action="" method="post">
-        <div class="clearfix">
-          <label for="id_forgot_password_email">Email</label>
-          <div class="input"><input autocapitalize="off" autocorrect="off" id="id_forgot_password_email" name="email" type="text" placeholder=""></div>
-        </div>
-        <div class="actions">
-          <input id="id_btn_forgot_password"  class="btn btn-primary" name="commit" type="submit" value="Recuperar senha">
-        </div>
+          <!-- .forgot-password -->
+          <ul class="forgot-password">
+              <li>
+                  <label class="forgot-password__label" for="id_forgot_password_email">Email:</label>
+                  <input autocapitalize="off" autocorrect="off" id="id_forgot_password_email" class="input input--full" name="email" type="text" placeholder="">
+              </li>
+
+              <li>
+                  <input id="id_btn_forgot_password" class="forgot-password__btn btn btn--primary" name="commit" type="submit" value="Recuperar senha">
+              </li>
+          </ul>
+          <!-- /.forgot-password -->
       </form>
     </div>
     <!-- /.page__body -->
@@ -478,6 +498,7 @@
       <div class="layout layout--full">
         <!-- .layout__item -->
         <div class="layout__item one-whole desk--three-tenths">
+          <!-- .sidebar -->
           <div id="id_sidebar" class="sidebar bitex-view
                                               bitex-view-profile
                                               bitex-view-trading
@@ -490,62 +511,74 @@
                                               bitex-view-deposit_requests
                                               bitex-view-ledger
                                               bitex-view-settings
+                                              bitex-view-algotrading
                                               bitex-view-my_broker
                                               bitex-view-verification">
-            <h3 class="sidebar__title">
-              Hi, <span class="bitex-model bitex-view-title" data-model-key="DisplayName"></span>
-              <small> (<span class="bitex-model bitex-view-title" data-model-key="PseudoName"></span>)</small>
-            </h3>
+                <!-- .sidebar__head -->
+                <div class="sidebar__head">
+                    <h3 class="sidebar-title">
+                        <div class="sidebar-title__info">
+                          Hi, <span class="bitex-model bitex-view-title" data-model-key="DisplayName"></span>
+                          <small> (<span class="bitex-model bitex-view-title" data-model-key="PseudoName"></span>)</small>
+                        </div>
 
-            <div id="account_balance">
-              <form class="form-inline">
-                <label class="control-label" for="id_instrument_1">Mercado:</label>
-                <select id="id_instrument_1">
-                  <option></option>
-                </select>
-              </form>
-            </div>
-
-            <div class="bitex-view-content">
-
-              <!-- .sidebar-box -->
-              <div class="sidebar-box sidebar-box--push--bottom">
-                <!-- .sidebar-box__body -->
-                <div class="sidebar-box__body">
-                  <div id="id_account_summary_content"></div>
+                        <div class="sidebar-title__icon">
+                            <i class="icon-chevron-down"></i>
+                        </div>
+                    </h3>
                 </div>
-                <!-- /.sidebar-box__body -->
-              </div>
-              <!-- /.sidebar-box -->
+                <!-- /.sidebar__head -->
+
+                <!-- .sidebar__body -->
+                <div class="sidebar__body">
+                    <!-- .sidebar-market -->
+                    <div id="account_balance" class="sidebar-market">
+                        <label for="id_instrument_1" class="sidebar-market__label">Mercado:</label>
+
+                        <select id="id_instrument_1" class="sidebar-market__select">
+                            <option></option>
+                        </select>
+                    </div>
+                    <!-- /.sidebar-market -->
+
+                    <div class="bitex-view-content">
+                      <!-- .sidebar-box -->
+                      <div class="sidebar-box sidebar-box--push--bottom">
+                          <div id="id_account_summary_content"></div>
+                      </div>
+                      <!-- /.sidebar-box -->
 
 
-              <!-- .sidebar-box -->
-              <div class="sidebar-box sidebar-box--push--bottom">
-                <!-- .sidebar-box__head -->
-                <header class="sidebar-box__head">
-                  <h6>Other links</h6>
-                </header>
-                <!-- /.sidebar-box__head -->
+                      <!-- .sidebar-box -->
+                      <div class="sidebar-box sidebar-box--links">
+                        <!-- .sidebar-box__head -->
+                        <header class="sidebar-box__head">
+                          <h6>Other links:</h6>
+                        </header>
+                        <!-- /.sidebar-box__head -->
 
-                <!-- .sidebar-box__body -->
-                <div class="sidebar-box__body">
-                  <ul>
-                    <li id="verification_menu_id">
-                      <a href="verification" data-switch-view="verification">
-                        <i class="icon-check"></i> Verificar a sua conta
-                      </a>
-                    </li>
-                    <li>
-                      <a href="" data-switch-view="faq">
-                        <i data-switch-view="faq" class="icon-question"></i> Suporte e Sugestões</a>
-                    </li>
-                  </ul>
+                        <!-- .sidebar-box__body -->
+                        <div class="sidebar-box__body">
+                          <ul>
+                            <li id="verification_menu_id">
+                              <a href="verification" data-switch-view="verification">
+                                <i class="icon-check"></i> Verificar a sua conta
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" data-switch-view="faq">
+                                <i data-switch-view="faq" class="icon-question"></i> Suporte e Sugestões</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- /.sidebar-box__body -->
+                      </div>
+                      <!-- /.sidebar-box -->
+                    </div>
                 </div>
-                <!-- /.sidebar-box__body -->
-              </div>
-              <!-- /.sidebar-box -->
-            </div>
+                <!-- /.sidebar__body -->
           </div>
+          <!-- /.sidebar -->
         </div>
         <!-- /.layout__item -->
 
@@ -595,41 +628,43 @@
                 <div id="account_overview_user_id"></div>
               </div>
 
-              <div class="section-title">
-                <h3 class="bitex-view-title">Enable or Disable Two steps authentication</h3>
-              </div>
 
-              <div class="content bitex-view-content">
+              <!-- .profile-two-factor -->
+              <div class="profile-two-factor">
+                  <!-- .profile-two-factor__title -->
+                  <h4 class="profile-two-factor__title">Enable or Disable Two steps authentication</h4>
+                  <!-- /.profile-two-factor__title -->
 
-                <div class="well span6">
-                  <div id="id_enable_two_factor_div" class="form-horizontal ">
+                  <!-- .profile-two-factor__body -->
+                  <div class="profile-two-factor__body bitex-view-content">
+                      <!-- .profile-two-factor__form -->
+                      <ul id="id_enable_two_factor_div" class="profile-two-factor__form">
+                          <li>
+                              <label class="profile-two-factor__label">Chave:</label>
+                              <div id='secret' class="bitex-model" data-model-key="TwoFactorSecret"></div>
 
-                    <div class="control-group">
-                      <label class="control-label">Chave</label>
-                      <div class="controls">
-                        <span id='secret' class="bitex-model" data-model-key="TwoFactorSecret"></span>
-                      </div>
-                    </div>
+                              <img id="id_secret_qr" src="" />
+                          </li>
 
-                    <div class="control-group">
-                      <div class="controls">
-                        <img id="id_secret_qr" style="width: 100%; margin-top: -30px" src="">
-                      </div>
-                    </div>
-
-                    <div class="control-group">
-                      <label class="control-label">Código de Autenticação</label>
-                      <div class="controls">
-                        <input id="id_second_step_verification" type="text" class="input-block-level"
-                               pattern="\d+" title="Código gerado pelo Google Authenticator"
-                               placeholder="Ex. 555555" required>
-                      </div>
-                    </div>
+                          <li>
+                              <label class="profile-two-factor__label">Código de Autenticação:</label>
+                              <input id="id_second_step_verification" type="text" class="input input--full"
+                                   pattern="\d+" title="Código gerado pelo Google Authenticator"
+                                   placeholder="Ex. 555555" required />
+                          </li>
+                      </ul>
+                      <!-- /.profile-two-factor__form -->
                   </div>
-                  <button id="id_btn_enable_two_factor" class="btn btn-primary">Habilitar</button>
-                  <button id="id_btn_disable_two_factor" class="btn btn-danger">Desabilitar</button>
-                </div>
+                  <!-- /.profile-two-factor__body -->
+
+                  <!-- .profile-two-factor__foot -->
+                  <div class="profile-two-factor__foot">
+                      <button id="id_btn_enable_two_factor" class="btn btn--primary profile-two-factor__btn">Habilitar</button>
+                      <button id="id_btn_disable_two_factor" class="btn btn--negative profile-two-factor__btn">Desabilitar</button>
+                  </div>
+                  <!-- /.profile-two-factor__foot -->
               </div>
+              <!-- /.profile-two-factor -->
             </div>
             <!-- /.page__body -->
           </div>
@@ -666,6 +701,22 @@
             <!-- /.page__body -->
           </div>
           <!-- /#trading -->
+
+          <!-- #algotrading -->
+          <div id="algotrading" class="bitex-view">
+            <!-- .page__head -->
+            <header class="page__head section-title">
+              <h1 class="page__title beta bitex-view-title">Algorithm Trading</h1>
+            </header>
+            <!-- /.page__head -->
+
+            <!-- .page__body -->
+            <div class="page__body bitex-view-content">
+            </div>
+            <!-- /.page__body -->
+          </div>
+          <!-- /#algotrading -->
+
 
           <!-- #ledger -->
           <div id="ledger" class="bitex-view">
@@ -927,7 +978,7 @@
         
         <a href="" data-switch-view="admin">admin</a> |
         Latency: <span class="bitex-model" data-model-key="latency">0</span> ms |
-        Version: 66f13c1 |
+        Version: 12a9ced |
         
         <a href="http://blinktrade.com/" target="_blank">© 2014 BlinkTrade Inc</a>
         | <a href="https://github.com/blinktrade/" target="_blank">Proudly 100% open source <span class="bitex-model" data-model-key="JSVersion"></span></a>
