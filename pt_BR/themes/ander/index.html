@@ -38,9 +38,9 @@
   
   <!--link href="/assets/themes/default/css/Dialog.css" rel="stylesheet"-->
   <link href="https://surbitcoin.com/pt_BR/assets/themes/default/css/fuelux.css" rel="stylesheet">
-  <link href="https://surbitcoin.com/pt_BR/assets/themes/default/css/style-new.css?v=ec00663" rel="stylesheet">
-  <link href="https://surbitcoin.com/pt_BR/assets/themes/ander/css/blinktrade.css?v=ec00663" rel="stylesheet">
-  <script data-cfasync="false" src="https://surbitcoin.com/pt_BR/assets/js/bitex_app_blink_trade.compiled.pt_BR.ander.js?v=ec00663" type="text/javascript"></script>
+  <link href="https://surbitcoin.com/pt_BR/assets/themes/default/css/style-new.css?v=9aaa3da" rel="stylesheet">
+  <link href="https://surbitcoin.com/pt_BR/assets/themes/ander/css/blinktrade.css?v=9aaa3da" rel="stylesheet">
+  <script data-cfasync="false" src="https://surbitcoin.com/pt_BR/assets/js/bitex_app_blink_trade.compiled.pt_BR.ander.js?v=9aaa3da" type="text/javascript"></script>
   
 </head>
 <body class=" ws-not-connected bitex-not-logged active-view-start ">
@@ -197,6 +197,12 @@
                   
                     
                   
+                    
+                      
+                        <li><a tabindex="-1" href="https://surbitcoin.com/ro/themes/ander/">RO</a></li>
+                      
+                    
+                  
                   </ul>
                 </li>
 
@@ -308,7 +314,7 @@
     <div class="page">
       <!-- .page__head -->
       <header class="page__head">
-        <h2 class="page__title beta bitex-view-title">FAQ - Pergunstas Frequentes</h2>
+        <h2 class="page__title beta bitex-view-title">FAQ - Perguntas Frequentes</h2>
       </header>
       <!-- /.page__head -->
 
@@ -319,7 +325,7 @@
         </div>
 
         <a href="" class="bitex-support-link" target="_blank">
-          <i class="icon-envelope"></i> Entre em contato caso que você não tenha conseguido encontrar a resposta para a sua pergunta</a>
+          <i class="icon-envelope"></i> Entre em contato caso você não tenha conseguido encontrar a resposta para a sua pergunta</a>
 
       </div>
       <!-- /.page__body -->
@@ -491,9 +497,27 @@
   <!-- /#forgot_password -->
 
   <div class="bitex-display-if-logged">
+
+
+    <div class="page">
+        <div class="alert | bitex-model" style="display: none" data-model-key="IsMissingVerification" data-model-action="show_element">
+          <button type="button" class="close pull-right" data-dismiss="alert">&times;</button>
+          <a href="" data-switch-view="verification"> Verifique a sua conta enviando seus documentos. </a>
+        </div>
+
+        <div class="alert alert-success | bitex-model" style="display: none" data-model-key="TwoFactorEnabled" data-model-action="hide_element">
+          <button type="button" class="close pull-right" data-dismiss="alert">&times;</button>
+          <a href="" data-switch-view="profile"> Você pode aumentar a segurança da sua conta apenas habilitando a autenticação em dois passos </a>
+        </div>
+
+        <div class="alert alert-error | bitex-model" style="display: none" data-model-key="IsAccountBlocked" data-model-action="show_element">
+          <button type="button" class="close pull-right" data-dismiss="alert">&times;</button>
+          <a href="" data-switch-view="faq"> A sua conta foi congelada pelo administrador, por favor contate o suporte. </a>
+        </div>
+    </div>
+
     <!-- .page -->
     <div class="page page--inner">
-
       <!-- .layout -->
       <div class="layout layout--full">
         <!-- .layout__item -->
@@ -520,10 +544,6 @@
                         <div class="sidebar-title__info">
                           Hi, <span class="bitex-model bitex-view-title" data-model-key="DisplayName"></span>
                           <small> (<span class="bitex-model bitex-view-title" data-model-key="PseudoName"></span>)</small>
-                        </div>
-
-                        <div class="sidebar-title__icon">
-                            <i class="icon-chevron-down"></i>
                         </div>
                     </h3>
                 </div>
@@ -632,7 +652,7 @@
               <!-- .profile-two-factor -->
               <div class="profile-two-factor">
                   <!-- .profile-two-factor__title -->
-                  <h4 class="profile-two-factor__title">Enable or Disable Two steps authentication</h4>
+                  <h4 class="profile-two-factor__title">Autenticação em 2 passos (2FA)</h4>
                   <!-- /.profile-two-factor__title -->
 
                   <!-- .profile-two-factor__body -->
@@ -978,7 +998,7 @@
         
         <a href="" data-switch-view="admin">admin</a> |
         Latency: <span class="bitex-model" data-model-key="latency">0</span> ms |
-        Version: ec00663 |
+        Version: 9aaa3da |
         
         <a href="http://blinktrade.com/" target="_blank">© 2014 BlinkTrade Inc</a>
         | <a href="https://github.com/blinktrade/" target="_blank">Proudly 100% open source <span class="bitex-model" data-model-key="JSVersion"></span></a>
