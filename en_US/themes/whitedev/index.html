@@ -3,8 +3,8 @@
 <html class="ls-theme-orange  ls-pre-panel">
 <head>
   
-      <title>SurBitcoin - The first bitcoin exchange in Venezuela</title>
-    
+  
+  <title> SurBitcoin - The first bitcoin exchange in Venezuela </title>
 
   <meta charset="utf-8">
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -12,11 +12,12 @@
   <meta name="author" content="BlinkTrade">
 
   
-      <meta name="description" content="The first bitcoin exchange in Venezuela">
-      <meta name="keywords" content="Buy and sell bitcoin in Venezuela, bitcoin exchange in Venezuela, sell bitcoins in Venezuela, buy bitcoins in Venezuela">
-      <meta property="og:title" content="SurBitcoin - The first bitcoin exchange in Venezuela">
-      <meta property="og:description" content="The first bitcoin exchange in Venezuela">
-    
+  
+
+  <meta name="description" content="The first bitcoin exchange in Venezuela">
+  <meta name="keywords" content="Buy and sell bitcoin in Venezuela, bitcoin exchange in Venezuela, sell bitcoins in Venezuela, buy bitcoins in Venezuela">
+  <meta property="og:title" content="SurBitcoin - The first bitcoin exchange in Venezuela">
+  <meta property="og:description" content="The first bitcoin exchange in Venezuela">
 
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -28,7 +29,6 @@
   <link rel="shortcut icon" href="https://surbitcoin.com/en_US/assets/exchange_logos/surbitcoin_favicon.ico">
   <link rel="icon" href="https://surbitcoin.com/en_US/assets/exchange_logos/surbitcoin_favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="favicon.png">
-  <meta name="apple-mobile-web-app-title" content="FoxBit Dashboard">
 
   <link rel="canonical" href="https://surbitcoin.com/en_US/themes/whitedev/index.html"/>
   <script type="text/javascript" src="//apis.google.com/js/plusone.js"></script>
@@ -40,12 +40,14 @@
   <link href="https://surbitcoin.com/en_US/assets/themes/whitedev/css/fuelux.css" rel="stylesheet">
   <link href="https://surbitcoin.com/en_US/assets/themes/default/css/default.uni-form.css" rel="stylesheet">
   <link href="https://surbitcoin.com/en_US/assets/themes/whitedev/css/main.css" rel="stylesheet">
+  <link href="https://surbitcoin.com/en_US/assets/css/flag-icon.css" rel="stylesheet">
 
-  
-      <link href="https://surbitcoin.com/en_US/assets/themes/whitedev/css/main.surbitcoin.css" rel="stylesheet">
-    
 
-  <script data-cfasync="false" src="https://surbitcoin.com/en_US/assets/js/bitex_app_blink_trade.compiled.en_US.whitedev.js?v=5fdbd14" type="text/javascript"></script>
+  <!--Custom CSS -->
+  <link href="https://surbitcoin.com/en_US/assets/themes/whitedev/css/main.surbitcoin.css" rel="stylesheet">
+
+  <script data-cfasync="false" src="https://surbitcoin.com/en_US/assets/js/bitex_app_blink_trade.compiled.en_US.whitedev.js?v=17633b4" type="text/javascript"></script>
+  <script src="https://surbitcoin.com/en_US/assets/js/externs/qrcode.min.js"></script>
 </head>
 <body class=" ws-not-connected bitex-not-logged active-view-start ">
 
@@ -74,13 +76,20 @@
     <!-- Dropdown language -->
     <div class="ls-language ls-notification-topbar ls-notification-links">
       <div data-ls-module="dropdown" class="ls-dropdown">
-          <a href="#" class="ls-ico-earth" role="button" class="dropdown-toggle" data-toggle="dropdown">EN_US <b class="caret"></b></a>
+          <a href="#" class="" role="button" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="flag-icon flag-icon-en_US"></span>
+              <b class="caret"></b>
+          </a>
           <nav class="ls-dropdown-nav ls-user-menu" aria-hidden="true">
             <ul>
             
               
                 
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="https://surbitcoin.com/">ES</a></li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="https://surbitcoin.com/">
+                        <span class="flag-icon flag-icon-es"></span>
+                    </a>
+                </li>
                 
               
             
@@ -88,25 +97,41 @@
             
               
                 
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="https://surbitcoin.com/pt_BR">PT_BR</a></li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="https://surbitcoin.com/pt_BR">
+                        <span class="flag-icon flag-icon-pt_BR"></span>
+                    </a>
+                </li>
                 
               
             
               
                 
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="https://surbitcoin.com/ro">RO</a></li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="https://surbitcoin.com/ro">
+                        <span class="flag-icon flag-icon-ro"></span>
+                    </a>
+                </li>
                 
               
             
               
                 
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="https://surbitcoin.com/zn_CN">ZN_CN</a></li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="https://surbitcoin.com/zn_CN">
+                        <span class="flag-icon flag-icon-zn_CN"></span>
+                    </a>
+                </li>
                 
               
             
               
                 
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="https://surbitcoin.com/vi">VI</a></li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="https://surbitcoin.com/vi">
+                        <span class="flag-icon flag-icon-vi"></span>
+                    </a>
+                </li>
                 
               
             
@@ -157,6 +182,8 @@
                                             bitex-view-profile
                                             bitex-view-trading
                                             bitex-view-offerbook
+                                            bitex-view-twofactor
+                                            bitex-view-admin_view
                                             bitex-view-customers
                                             bitex-view-account_overview
                                             bitex-view-withdraw
@@ -167,6 +194,7 @@
                                             bitex-view-settings
                                             bitex-view-settings
                                             bitex-view-algotrading
+                                            bitex-view-api
                                             bitex-view-my_broker
                                             bitex-view-verification">
 
@@ -183,7 +211,7 @@
                 <li><a href="" data-switch-view="trading" role="option">Buy or Sell</a></li>
                 <li><a href="" data-switch-view="offerbook" role="option">Order book</a></li>
             </ul>
-            <a href="javascript:location.reload()" class="ls-btn-logout" role="combobox" aria-expanded="false">Sair</a>
+            <a href="javascript:location.reload()" class="ls-btn-logout" role="combobox" aria-expanded="false">Logout</a>
         </nav>
 
     </div>
@@ -192,49 +220,90 @@
     <div class="bitex-display-if-non-broker">
         <h1 data-switch-view="offerbook" class="ls-brand-name">
             <a href="#" data-switch-view="offerbook">
+
                 
-                        <img data-switch-view="offerbook" src="https://surbitcoin.com/en_US/assets/themes/whitedev/images/brand-surbitcoin.svg">
-                    
+                    <img data-switch-view="offerbook" src="https://surbitcoin.com/en_US/assets/themes/whitedev/images/brand-surbitcoin.png" class="brand-menu">
+                
             </a>
         </h1>
     </div>
 
-    <div id="account_balance" class="ls-box youraccount">
-    <h5 class="ls-title-4 ls-text-uppercase">Your Account</h5>
-    <form class="row">
-        <div class="col-md-6">
-            <label class="control-label" for="id_instrument_1">Market:</label>
-        </div>
-        <div class="col-md-6">
-            <select id="id_instrument_1" class="ls-dropdown-nav">
-            <option></option>
-            </select>
-        </div>
-    </form>
-    <hr>
+    <div id="sidebar_wrap">
+      <div id="account_balance" class="ls-box youraccount">
+          <h5 class="ls-title-4 ls-text-uppercase">Account overview</h5>
+        <form class="row">
+            <div class="col-md-6">
+                <label class="control-label" for="id_instrument_1">Market:</label>
+            </div>
+            <div class="col-md-6">
+                <select id="id_instrument_1" class="ls-dropdown-nav">
+                <option></option>
+                </select>
+            </div>
+        </form>
+        <div id="id_account_summary_content"></div>
+      </div>
 
-    <div id="id_account_summary_content" ></div>
+      <div id="id_remittance_box" style="border-right:1px solid #eee" class="youraccount"></div>
     </div>
-
-    <div id="id_remittance_box" style="margin-top:-35px;border-right:1px solid #eee" class="youraccount"></div>
 
     <nav class="ls-menu" role="navigation">
         <ul role="menu">
-            <li><a href="" data-switch-view="profile" class="ls-ico-user" role="menuitem" style="outline: none;">My Profile</a></li>
-            <li class=""><a href="" data-switch-view="my_broker" class="ls-ico-info" role="menuitem" style="outline: none;"> About the exchange</a></li>
-            <li><a href="" data-switch-view="trading" class="ls-ico-docs" role="menuitem">Buy or Sell</a></li>
-            <li><a href="" data-switch-view="offerbook" class="ls-ico-book" role="menuitem">Order book</a></li>
-            <li><a href="" data-switch-view="algotrading" class="ls-ico-cog" role="menuitem">Algo Trading</a></li>
-            <li><a href="" data-switch-view="ledger" class="ls-ico-list" role="menuitem">Ledger</a></li>
-
-            <li class="bitex-display-if-broker"><a href="" data-switch-view="customers" class="ls-ico-user" role="menuitem">My customers</a></li>
-            <li class="bitex-display-if-broker"><a href="" data-switch-view="deposit_requests" class="ls-ico-download" role="menuitem">Deposit requests</a></li>
-            <li class="bitex-display-if-broker"><a href="" data-switch-view="withdraw_requests" class="ls-ico-upload" role="menuitem">Withdrawal requests</a></li>
-
-            <li><a href="" data-switch-view="deposit_requests" class="ls-ico-download" role="menuitem">My Deposits</a></li>
-            <li><a href="" data-switch-view="withdraw_requests" class="ls-ico-upload" role="menuitem">My Withdrawals</a></li>
-            <li id="verification_menu_id"><a href="" data-switch-view="verification"  role="menuitem">Verify your account</a></li>
-            <li><a href="" data-switch-view="api" class="ls-ico-upload" role="menuitem">API</a></li>
+            <li id="menu-admin_view" class="bitex-display-if-broker">
+              <a href="" data-switch-view="admin_view" class="ls-ico-user" role="menuitem" style="outline: none;">
+                Admin
+              </a>
+            </li>
+            <li id="menu-profile">
+              <a href="" data-switch-view="profile" class="ls-ico-user" role="menuitem" style="outline: none;">
+                My Profile
+              </a>
+            </li>
+            <li id="menu-my_broker">
+              <a href="" data-switch-view="my_broker" class="ls-ico-info" role="menuitem" style="outline: none;">
+                About the exchange
+              </a>
+            </li>
+            <li id="menu-trading">
+              <a href="" data-switch-view="trading" class="ls-ico-docs" role="menuitem">
+                Buy or Sell
+              </a>
+            </li>
+            <li id="menu-offerbook">
+              <a href="" data-switch-view="offerbook" class="ls-ico-book" role="menuitem">
+                Order book
+              </a>
+            </li>
+            <li id="menu-algotrading">
+              <a href="" data-switch-view="algotrading" class="ls-ico-cog" role="menuitem">
+                Algo Trading
+              </a>
+            </li>
+            <li id="menu-ledger">
+              <a href="" data-switch-view="ledger" class="ls-ico-list" role="menuitem">
+                Ledger
+              </a>
+            </li>
+            <li id="menu-deposit" class="bitex-display-if-non-broker">
+              <a href="" data-switch-view="deposit" class="ls-ico-download" role="menuitem">
+                My Deposits
+              </a>
+            </li>
+            <li id="menu-withdraw" class="bitex-display-if-non-broker">
+              <a href="" data-switch-view="withdraw" class="ls-ico-upload" role="menuitem">
+                My Withdrawals
+              </a>
+            </li>
+            <li id="verification_menu_id">
+              <a href="" data-switch-view="verification" class="ls-ico-checkbox-checked"  role="menuitem">
+                Verify your account
+              </a>
+            </li>
+            <li id="menu-api">
+              <a href="" data-switch-view="api" class="ls-ico-upload" role="menuitem">
+                API
+              </a>
+            </li>
         </ul>
     </nav>
 
@@ -260,7 +329,7 @@
                             <button type="button" class="close" data-dismiss="alert">&times;</button>
                         </td>
                         <td>
-                            <a href="" data-switch-view="profile"> You can increase the security of your account by enabling authentication in two steps </a>
+                            <a href="" data-switch-view="twofactor"> You can increase the security of your account by enabling authentication in two steps </a>
                         </td>
                     </tr>
                 </table>
@@ -291,8 +360,7 @@
                     <img src="/en_US/assets/exchange_logos/surbitcoin_landing_page_logo.png" style="max-width:60%;">
                     <h1 class="ls-title-intro">
                         
-                            The first bitcoin exchange in Venezuela
-                        
+                        The first bitcoin exchange in Venezuela
                     </h1>
                 <form action="" class="form-inline">
                     <div class="row">
@@ -305,14 +373,14 @@
                         <div class="col-md-3"></div>
                         <div class="col-md-6">
                             <div class="col-md-12 login-input">
-                                    <input class="focus" id="id_landing_username" placeholder="Username:" size="30" type="text">
+                                    <input class="focus" id="id_landing_username" placeholder="Username:" size="30" type="text" autofocus>
                                     <input id="id_landing_password" placeholder="Password:" size="30"  type="password">
                             </div>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <br>
-                        <button id="id_landing_signin" class="ls-btn ls-btn-lg">login</button>
+                        <button id="id_landing_signin" class="ls-btn ls-btn-lg">Login</button>
                         <br>
                             <ul class="start-links">
                                 <li style="width:20%">
@@ -330,7 +398,7 @@
     </div>
   </div>
 
-  <div id="faq" class="container bitex-view min-height-view" style="margin-top:20px;">
+  <div id="faq" class="container bitex-view min-height-view" style="margin-top:20px;display:none">
     <div class="page-header">
       <h1 class="bitex-view-title">FAQ - Frequently Asked Questions</h1>
     </div>
@@ -477,7 +545,7 @@
           </div>
           <div id="How do I deposit local currency into my account?" class="accordion-body in collapse ">
             <div class="accordion-inner">
-              <p>On the main menu, click on “Deposit local currency” and a new window will appear. You will have to specify the amount of FIAT you want to deposit in order to buy bitcoins. Have in mind that the exchange might charge you a fee every time you wish to make a deposit. </p>
+              <p>On the main menu, click on “Deposit local currency” and a new window will appear. You will have to specify the amount of FIAT you want to deposit in order to buy bitcoins. Have in mind that the exchange might charge you a fee every time you wish to make a deposit.</p>
 
             </div>
           </div>
@@ -798,7 +866,7 @@ Further more, all the safety measures of the hot wallet are run by blockchain.in
   </div>
 
   <!-- signup page-->
-  <div id="signup" class="container bitex-view min-height-view" style="margin-top:20px;">
+  <div id="signup" class="container bitex-view min-height-view" style="margin-top:20px;display:none">
     <div class="page-header ls-title-4">
       <h1 class="bitex-view-title">Sign up</h1>
     </div>
@@ -863,7 +931,7 @@ Further more, all the safety measures of the hot wallet are run by blockchain.in
   </div>
 
   <!-- signin page-->
-  <div id="signin" class="container bitex-view" style="margin-top:20px;min-height:85%">
+  <div id="signin" class="container bitex-view" style="margin-top:20px;min-height:85%;display:none">
     <div class="page-header">
       <h1 class="bitex-view-title">Sign in</h1>
     </div>
@@ -893,7 +961,7 @@ Further more, all the safety measures of the hot wallet are run by blockchain.in
 
 
 
-  <div id="themes" class="bitex-view container min-height-view" style="margin-top:20px;">
+  <div id="themes" class="bitex-view container min-height-view" style="margin-top:20px;display:none">
     <div class="page-header ls-title-4">
         <h1 class="bitex-view-title">Themes</h1>
     </div>
@@ -903,36 +971,40 @@ Further more, all the safety measures of the hot wallet are run by blockchain.in
     <div class="bitex-view-content">
         <div class="row" style="text-align:center">
             <div class="col-md-4">
-                <a href="https://surbitcoin.com/en_US/themes/default/">
-                    <img src="https://surbitcoin.com/en_US/assets/exchange_logos/thumb-themes/default-theme.jpg" alt="Default Theme" class="thumb-theme">
-                    <hr>
-                    <h3 class="ls-title-4">Default Theme</h3>
-                </a>
+              <a href="https://surbitcoin.com/en_US/themes/coinage/">
+                  <div class="thumb-theme">
+                      <img src="https://surbitcoin.com/en_US/assets/exchange_logos/thumb-themes/surbitcoin-coinage-thumb.jpg" alt="Coinage Theme">
+                      <h3>Coinage Theme</h3>
+                  </div>
+              </a>
             </div>
             <div class="col-md-4">
-                <a href="https://surbitcoin.com/en_US/themes/ander/">
-                    <img src="https://surbitcoin.com/en_US/assets/exchange_logos/thumb-themes/ander-theme.jpg" alt="Ander Theme" class="thumb-theme">
-                    <hr>
-                    <h3 class="ls-title-4">Ander</h3>
+                <a href="https://surbitcoin.com/en_US/themes/default/">
+                    <div class="thumb-theme">
+                        <img src="https://surbitcoin.com/en_US/assets/exchange_logos/thumb-themes/surbitcoin-default-thumb.jpg" alt="Default Theme">
+                        <h3 class="ls-title-4">Simple Theme</h3>
+                    </div>
                 </a>
             </div>
             <div class="col-md-4">
                 <a href="https://surbitcoin.com/en_US/themes/whitedev/">
-                    <img src="https://surbitcoin.com/en_US/assets/exchange_logos/thumb-themes/whitedev-theme.jpg" alt="Whitedev Theme" class="thumb-theme">
-                    <hr>
-                    <h3 class="ls-title-4">Whitedev</h3>
+                    <div class="thumb-theme">
+                        <img src="https://surbitcoin.com/en_US/assets/exchange_logos/thumb-themes/surbitcoin-whitedev-thumb.jpg" alt="Whitedev Theme">
+                        <h3 class="ls-title-4">Whitedev</h3>
+                    </div>
                 </a>
             </div>
         </div>
     </div>
   </div>
 
-  <div id="market" class="container-fluid bitex-view" style="margin-bottom:20px;">
+  <div id="market" class="container-fluid bitex-view" style="margin-bottom:20px;display:none">
     <div class="row-fluid">
       <div class="page-header ls-title-4">
         <h1>Market</h1>
       </div>
     </div>
+    
     <div class="bitex-view-content">
     </div>
   </div>
@@ -940,7 +1012,7 @@ Further more, all the safety measures of the hot wallet are run by blockchain.in
 
 
 
-  <div id="forgot_password" class="container bitex-view min-height-view" style="margin-top:20px">
+  <div id="forgot_password" class="container bitex-view min-height-view" style="margin-top:20px;display:none">
     <div class="page-header">
       <h1 class="bitex-view-title">Password recovery</h1>
     </div>
@@ -960,7 +1032,7 @@ Further more, all the safety measures of the hot wallet are run by blockchain.in
   </div>
 
 
-  <div id="set_new_password" class="container bitex-view min-height-view" style="margin-top:20px;">
+  <div id="set_new_password" class="container bitex-view min-height-view" style="margin-top:20px;display:none">
     <div class="page-header">
       <h1 class="bitex-view-title">Set new password</h1>
     </div>
@@ -1012,34 +1084,17 @@ Further more, all the safety measures of the hot wallet are run by blockchain.in
                 </header>
 
                 <div class="content bitex-view-content">
-
-                    <div id="id_enable_two_factor_div" class="col-md-12" style="text-align: center;">
-
-                        <div class="">
-                            <img id="id_secret_qr" style="" src="">
-                        </div>
-                        <div class="">
-                            <label class="control-label">Key</label>
-                            <span id='secret' class="bitex-model" data-model-key="TwoFactorSecret"></span>
-                        </div>
-                        <hr>
-                        <div class="ls-prefix-group">
-                            <label class="ls-label-text-prefix">Authentication code</label>
-
-                            <input id="id_second_step_verification"
-                                    type="text"
-                                    class="input-block-level" pattern="\d+"
-                                    title="Code generated by Google Authenticatior"
-                                    placeholder="Ex. 555555" required>
-                        </div>
-                    </div>
                     <div class="col-md-12" style="text-align:center;margin-top:10px">
-                        <button id="id_btn_enable_two_factor" class="ls-btn ls-btn-primary">Enable</button>
+                        <a data-switch-view="twofactor" id="id_btn_enable_two_factor" class="ls-btn ls-btn-primary">Enable</a>
                         <button id="id_btn_disable_two_factor" class="ls-btn ls-btn-danger">Disable</button>
                     </div>
                 </div>
             </div>
         </div>
+      </div>
+
+      <div id="twofactor" class="bitex-view">
+        <div id="twofactor_content"></div>
       </div>
 
       <div id="trading" class="bitex-view">
@@ -1067,19 +1122,61 @@ Further more, all the safety measures of the hot wallet are run by blockchain.in
         <div class="bitex-view-content">
           <div id="offer_book_order_entry_content" class="row-fluid"></div>
           <div class="well">
-            <div class="col-md-12" style="padding-top:20px;padding-bottom:20px;">
-              <div class="btn-group pull-right">
-                <div class="ls-btn | btn-show-cum-qty">Cumulative</div>
-                <div class="ls-btn | btn-show-fees ">Fees</div>
-              </div>
-            </div>
-            <div class="row-fluid">
+            <div class="row-fluid" style="display:table;width:100%">
+              <hr>
               <div id="id_order_book_bid_content" class="col-md-6"></div>
               <div id="id_order_book_ask_content" class="col-md-6"></div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- admin -->
+      <div id="admin_view" class="bitex-view">
+        <div class="container-fluid">
+          <h1 class="ls-title-intro">Admin</h1>
+        </div>
+        <div class="content bitex-view-content">
+          <div id="admin-tabs">
+            <ul class="ls-tabs-nav nav nav-tabs">
+              <li class="active">
+                <a href="#TabCustomers" data-toggle="tab">My customers</a>
+              </li>
+              <li>
+                <a href="#TabDepositRequests" data-toggle="tab">Deposit requests</a>
+              </li>
+              <li>
+                <a href="#TabWithdrawRequests" data-toggle="tab">Withdrawal requests</a>
+              </li>
+              <li>
+                <a href="#TabWithdrawMethods" data-toggle="tab">Withdraw methods</a>
+              </li>
+            </ul>
+            <div class="tab-content ls-tabs-container">
+              <div class="tab-pane fade ls-tab-content" id="TabCustomers">
+                <h2 class="bitex-view-title">My customers</h2>
+                <div id="admin_customers"></div>
+              </div>
+              <div class="tab-pane fade ls-tab-content" id="TabDepositRequests">
+                <h2 class="bitex-view-title">Deposit requests</h2>
+
+                <div id="admin_deposit_requests"></div>
+              </div>
+              <div class="tab-pane fade ls-tab-content" id="TabWithdrawRequests">
+                <h2 class="bitex-view-title">Withdrawal requests</h2>
+
+                <div id="admin_withdraw_requests"></div>
+              </div>
+              <div class="tab-pane fade ls-tab-content" id="TabWithdrawMethods">
+                <h2 class="bitex-view-title">Withdraw methods</h2>
+
+                <div id="admin_withdraw_methods"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /admin -->
 
       <div id="customers" class="bitex-view">
         <div class="container-fluid">
@@ -1170,8 +1267,9 @@ Further more, all the safety measures of the hot wallet are run by blockchain.in
           <h3 class="ls-title-intro ls-ico-list">API Keys</h3>
         </div>
         <div class="content bitex-view-content">
-          <div id="id_api_button_group"></div>
-          <div id="id_api_list"></div>
+          <div id="id_api_button_group" class="row-fluid pull-right">
+            <a id="id_btn_new_api_key" class="ls-btn ls-btn-primary"><i class="icon-plus "></i> New API Key</a>
+          </div>
         </div>
       </div>
 
@@ -1234,7 +1332,7 @@ Further more, all the safety measures of the hot wallet are run by blockchain.in
                       <a href="#">Latency: <span class="bitex-model" data-model-key="latency">0</span> ms</a>
                     </div>
                     <div class="col-md-1 ls-footer-item">
-                      <a href="#">Version: 5fdbd14</a>
+                      <a href="#">Version: 17633b4</a>
                     </div>
                     
                     <div class="col-md-2 ls-footer-item">
@@ -1269,7 +1367,7 @@ Further more, all the safety measures of the hot wallet are run by blockchain.in
                       <a href="#">Latency: <span class="bitex-model" data-model-key="latency">0</span> ms</a>
                     </div>
                     <div class="col-md-1 ls-footer-item">
-                      <a href="#">Version: 5fdbd14</a>
+                      <a href="#">Version: 17633b4</a>
                     </div>
                     
                     <div class="col-md-2 ls-footer-item">
@@ -1307,10 +1405,11 @@ Further more, all the safety measures of the hot wallet are run by blockchain.in
         var broker_id = 1;
         var country_code = "VE";
         var blinktrade_api = "api.blinktrade.com";
+        var symbol = "BTCVEF";
 
-        var remittance_box = { 'BRL':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> BRL',  'BRL', 'BLINK_BTCBRL_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCBRL_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID'  ], ['BRL -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCVEF_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ], ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID'  ] ], 'USD':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ] ], 'VEF':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCVEF_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID' ] , ['BRL -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCVEF_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ], ['VEF -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCVEF_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCVEF_BEST_BID' ] ], 'CLP':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID' ] , ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ] , ['VEF -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCVEF_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCVEF_BEST_BID' ] ], 'PKR':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> PKR',  'PKR', 'BLINK_BTCPKR_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCPKR_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID' ] ] };
+        var remittance_box = { 'BRL':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> BRL',  'BRL', 'BLINK_BTCBRL_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCBRL_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID'  ], ['BRL -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCVEF_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ], ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID'  ] ], 'USD':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ] ], 'VEF':[ ['SurBitcoin',         'VEF', 'BLINK_BTCVEF_BEST_BID / 100000000', 'BLINK_BTCVEF_BEST_ASK / 100000000'  ]  ], 'CLP':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID' ] , ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ] , ['VEF -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCVEF_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCVEF_BEST_BID' ] ], 'PKR':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> PKR',  'PKR', 'BLINK_BTCPKR_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCPKR_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID' ] ] };
 
-        _app = new BlinkTradeApp(broker_id, remittance_box,  country_code );
+        _app = new BlinkTradeApp(broker_id, remittance_box,  country_code, symbol);
         _app.run(blinktrade_api);
       })();
     </script>
