@@ -38,15 +38,15 @@
   <script type="text/javascript" src="//apis.google.com/js/plusone.js"></script>
 
   
-  <link href="https://surbitcoin.com/en_US/assets/themes/default/css/style-new.css?v=3f2f8ac" rel="stylesheet">
+  <link href="https://surbitcoin.com/en_US/assets/themes/default/css/style-new.css?v=050eba1" rel="stylesheet">
   <link href="https://surbitcoin.com/en_US/assets/css/flag-icon.css" rel="stylesheet">
 
   
-    <link href="https://surbitcoin.com/en_US/assets/themes/coinage/sass/main.lightred.css?v=3f2f8ac" rel="stylesheet">
+    <link href="https://surbitcoin.com/en_US/assets/themes/coinage/sass/main.darkblue.css?v=050eba1" rel="stylesheet">
   
 
   <link rel="stylesheet" href="https://surbitcoin.com/en_US/assets/themes/coinage/css/font-awesome.min.css">
-  <script data-cfasync="false" src="https://surbitcoin.com/en_US/assets/js/bitex_app_blink_trade.compiled.en_US.coinage.js?v=3f2f8ac" type="text/javascript"></script>
+  <script data-cfasync="false" src="https://surbitcoin.com/en_US/assets/js/bitex_app_blink_trade.compiled.en_US.coinage.js?v=050eba1" type="text/javascript"></script>
   <script src="https://surbitcoin.com/en_US/assets/themes/coinage/javascript/jquery-1.12.0.min.js"></script>
   <script src="https://surbitcoin.com/en_US/assets/themes/coinage/javascript/bootstrap.min.js"></script>
   <script src="https://surbitcoin.com/en_US/assets/js/externs/qrcode.min.js"></script>
@@ -295,7 +295,30 @@
                 <!-- .home-banner__cell -->
                 <div class="home-banner__cell">
                     
-                    <h1 class="home-banner__title">The first bitcoin exchange in Venezuela</h1>
+                    <h2 class="home-banner__title">The first bitcoin exchange in Venezuela</h2>
+
+                   <div class="home-banner__ticker">
+                      <div class="row bitex-display-if-ws-connected">
+                          <div class="col-sm-6">
+                              <h3 class="home-banner__ticker_label">
+                                  Buy
+                              </h3>
+                              <h1 class="bitex-model home-banner__ticker_value"
+                                data-model-key-list="formatted_BLINK_BTCVEF_BEST_BID"
+                                data-model-formula="formatted_BLINK_BTCVEF_BEST_BID"
+                                data-blink-class="balance-info-blink"></h1>
+                          </div>
+                          <div class="col-sm-6">
+                              <h3 class="home-banner__ticker_label">
+                                  Sell
+                              </h3>
+                              <h1 class="bitex-model home-banner__ticker_value"
+                                data-model-key-list="formatted_BLINK_BTCVEF_BEST_ASK"
+                                data-model-formula="formatted_BLINK_BTCVEF_BEST_ASK"
+                                data-blink-class="balance-info-blink"></h1>
+                          </div>
+                      </div>
+                   </div>
 
                     <!-- .home-->
                     <div class="col-xs-12 col-sm-8 col-md-6 col-md-offset-3 col-sm-offset-2">
@@ -386,12 +409,12 @@
                         <!-- .home-news-item -->
                         <div class="home-news-item">
                             <div class="home-news-item__icon">
-                                <img class="home-img" src="https://surbitcoin.com/en_US/assets/themes/coinage/img/ico-decentralized.png" alt="" />
+                                <img class="home-img" src="https://surbitcoin.com/en_US/assets/themes/coinage/img/ico-liquidity.png" alt="" />
                             </div>
 
-                            <h2 class="home-news-item__title h3">Member of BLINKTRADE</h2>
+                            <h2 class="home-news-item__title h3">Maecenas vel magna</h2>
 
-                            <p>We are a member of the global <a href="https://blinktrade.com" target="_BLANK">BlinkTrade network</a>, that includes <a href="https://foxbit.com.br" target="_BLANK">FoxBit</a> in Brazil, <a href="https://surbitcoin.com/themes/coinage/" target="_BLANK">SurBitcoin</a> in Venezuela, <a href="https://chilebit.net/" target="_BLANK">ChileBit.NET</a> in Chile, <a href="https://urdubit.com/" target="_BLANK">UrduBit</a> in Pakistan and <a href="https://vbtc.vn/" target="_BLANK">VBTC</a> in Vietnam among other companies, market makers, remittance agencies and payment processors. Through our platform you will have access to this global network of exchanges and will be able to navigate all of them in the language of your choice</p>
+                            <p>Donec ac tincidunt enim, quis porttitor massa. Sed vulputate ex at quam venenatis, non facilisis justo vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi diam nisl, congue vehicula maximus eget, tempor nec ipsum. Vestibulum feugiat consequat lacus et congue. Phasellus eu felis vel dui cursus pharetra quis non lectus. Curabitur porta ultrices magna sit amet ultrices. Nam cursus lorem mollis arcu dignissim congue. Praesent vitae venenatis lorem, sit amet efficitur ipsum.</p>
                         </div>
                         <!-- /.home-news-item -->
                     </div>
@@ -737,6 +760,8 @@
                                         bitex-view-settings
                                         bitex-view-algotrading
                                         bitex-view-api
+                                        bitex-view-partners
+                                        bitex-view-purseio
                                         bitex-view-my_broker
                                         bitex-view-verification">
 
@@ -752,7 +777,7 @@
 
               <!-- .sidebar-box -->
               <div class="sidebar-box">
-                  <h5 class="sidebar-box__title">NAVEGATION</h5>
+                  <h5 class="sidebar-box__title">Navigation</h5>
 
                   <div class="sidebar-box__body">
                       <ul class="sidebar-box-nav nav">
@@ -774,6 +799,11 @@
                           <li role="presentation" id="menu-offerbook">
                               <a href="#" data-switch-view="offerbook">
                                   <i class="glyphicon glyphicon-book"></i> Order book
+                              </a>
+                          </li>
+                          <li role="presentation" id="menu-partners">
+                              <a href="#" data-switch-view="partners">
+                                  <i class="glyphicon glyphicon-shopping-cart"></i> Use your bitcoins
                               </a>
                           </li>
                           <li role="presentation" id="menu-history">
@@ -1191,6 +1221,40 @@
                 </div>
                 <!-- /#account_overview -->
 
+                <!-- view partners -->
+                <div id="partners" class="bitex-view">
+                  <header class="page__head section-title">
+                    <h1 class="page__title h2 bitex-view-title">Use your bitcoins</h1>
+                  </header>
+                  <div class="page__body bitex-view-content">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                          <img src="https://surbitcoin.com/en_US/assets/exchange_logos/partners/purseio.png" alt="Purse.io">
+                          <div class="caption">
+                            <h3>Purse.io</h3>
+                            <p>Save 15% Off Amazon with Bitcoin</p>
+                            <p>
+                              <a href="https://purse.io/?_a=BLINKTRADE" target="_blank" class="btn btn-primary" role="button">
+                                More
+                              </a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /view partners -->
+
+                <div id="purseio" class="bitex-view">
+                  <header class="page__head section-title">
+                    <h1 class="page__title h2 bitex-view-title">Purse.io</h1>
+                  </header>
+                  <div class="page__body bitex-view-content">
+                  </div>
+                </div>
+
 
                 <!-- #settings -->
                 <div id="settings" class="bitex-view">
@@ -1275,6 +1339,8 @@
                               bitex-view-settings
                               bitex-view-algotrading
                               bitex-view-api
+                              bitex-view-partners
+                              bitex-view-purseio
                               bitex-view-my_broker
                               bitex-view-verification">
               <!-- .sidebar-box -->
@@ -1898,7 +1964,7 @@ Further more, all the safety measures of the hot wallet are run by blockchain.in
                     </li>
                     
                     <li>
-                        Version: 3f2f8ac
+                        Version: 050eba1
                     </li>
                     <li>
                         <a href="https://github.com/blinktrade/" target="_blank">Proudly 100% open source <span class="bitex-model" data-model-key="JSVersion"></span></a>
@@ -1915,7 +1981,9 @@ Further more, all the safety measures of the hot wallet are run by blockchain.in
                         <a href="#" data-switch-view="api">API </a>
                     </li>
                     <li>
+                      
                         <a href="" data-switch-view="faq">Suggestions & Support</a>
+                      
                     </li>
                 </ul>
             </div>
@@ -1957,7 +2025,7 @@ Further more, all the safety measures of the hot wallet are run by blockchain.in
       var blinktrade_api = "api.blinktrade.com";
       var symbol = "BTCVEF";
 
-      var remittance_box = { 'BRL':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> BRL',  'BRL', 'BLINK_BTCBRL_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCBRL_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID'  ], ['BRL -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCVEF_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ], ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID'  ] ], 'USD':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ] ], 'VEF':[ ['SurBitcoin',         'VEF', 'BLINK_BTCVEF_BEST_BID / 100000000', 'BLINK_BTCVEF_BEST_ASK / 100000000'  ]  ], 'CLP':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID' ] , ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ] , ['VEF -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCVEF_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCVEF_BEST_BID' ] ], 'PKR':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> PKR',  'PKR', 'BLINK_BTCPKR_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCPKR_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID' ] ] };
+      var remittance_box = { 'BRL':[ ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> BRL',  'BRL', 'BLINK_BTCBRL_BEST_BID /  BITSTAMP_BTCUSD_BEST_ASK', 'BLINK_BTCBRL_BEST_ASK /  BITSTAMP_BTCUSD_BEST_BID'  ], ['BRL -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCVEF_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ], ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID'  ] ], 'USD':[ ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ] ], 'VEF':[ ['SurBitcoin',         'VEF', 'BLINK_BTCVEF_BEST_BID / 100000000', 'BLINK_BTCVEF_BEST_ASK / 100000000'  ]  ], 'CLP':[ ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BITSTAMP_BTCUSD_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BITSTAMP_BTCUSD_BEST_BID' ] , ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ] , ['VEF -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCVEF_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCVEF_BEST_BID' ] ], 'PKR':[ ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> PKR',  'PKR', 'BLINK_BTCPKR_BEST_BID /  BITSTAMP_BTCUSD_BEST_ASK', 'BLINK_BTCPKR_BEST_ASK /  BITSTAMP_BTCUSD_BEST_BID' ] ] };
 
       _app = new BlinkTradeApp(broker_id, remittance_box, country_code, symbol);
       _app.run(blinktrade_api);
@@ -1994,6 +2062,8 @@ Further more, all the safety measures of the hot wallet are run by blockchain.in
           type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
   </script>
   <!--End of Zopim Live Chat Script-->
+  
+
   
 
   </body>

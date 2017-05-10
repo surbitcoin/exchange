@@ -43,8 +43,8 @@
     <link href="https://surbitcoin.com/zn_CN/assets/themes/default/css/Dialog.css" rel="stylesheet">
     <link href="https://surbitcoin.com/zn_CN/assets/themes/default/css/fuelux.css" rel="stylesheet">
     <link href="https://surbitcoin.com/zn_CN/assets/themes/default/css/default.uni-form.css" rel="stylesheet">
-    <link href="https://surbitcoin.com/zn_CN/assets/themes/default/css/style.css?v=3f2f8ac" rel="stylesheet">
-    <script data-cfasync="false" src="https://surbitcoin.com/zn_CN/assets/js/bitex_app_blink_trade.compiled.zn_CN.default.js?v=3f2f8ac" type="text/javascript"></script>
+    <link href="https://surbitcoin.com/zn_CN/assets/themes/default/css/style.css?v=050eba1" rel="stylesheet">
+    <script data-cfasync="false" src="https://surbitcoin.com/zn_CN/assets/js/bitex_app_blink_trade.compiled.zn_CN.default.js?v=050eba1" type="text/javascript"></script>
     <script src="https://surbitcoin.com/zn_CN/assets/js/externs/qrcode.min.js"></script>
     
   </head>
@@ -66,7 +66,11 @@
 
           <ul class="nav navbar-nav pull-right">
             
-            <li><a href="" data-switch-view="faq">常见问题</a></li>
+            <li>
+              
+                <a href="" data-switch-view="faq">常见问题</a>
+              
+            </li>
             <li class="bitex-display-if-logged"><a href="" data-switch-view="offerbook">交易</a></li>
             <li><a href="" data-switch-view="market">市场</a></li>
             <li class="bitex-hide-if-logged"><a href="" data-switch-view="signin">登陆</a></li>
@@ -612,6 +616,38 @@
         </div>
       </div>
 
+      <div id="partners" class="bitex-view">
+        <header class="page__head section-title">
+          <h1 class="page__title h2 bitex-view-title">Partners</h1>
+        </header>
+        <div class="page__body bitex-view-content">
+          <div class="row-fluid">
+            <ul class="thumbnails">
+              <li class="span4">
+                <div class="thumbnail">
+                  <img src="https://surbitcoin.com/zn_CN/assets/exchange_logos/partners/purseio.png" alt="Purse.io">
+                  <div class="caption">
+                    <h3>Purse.io</h3>
+                    <p>Save 15% Off Amazon with Bitcoin</p>
+                    <p><a href="https://purse.io/?_a=BLINKTRADE" target="_blank" class="btn btn-primary" role="button">
+                        更多
+                    </a></p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="purseio" class="bitex-view">
+        <header class="page__head section-title">
+        <h1 class="page__title h2 bitex-view-title">Purse.io</h1>
+        </header>
+        <div class="page__body bitex-view-content">
+        </div>
+      </div>
+
       <div id="settings" class="bitex-view">
         <div class="section-title">
           <h3 class="bitex-view-title">设置</h3>
@@ -686,6 +722,8 @@
                                                 bitex-view-settings
                                                 bitex-view-algotrading
                                                 bitex-view-api
+                                                bitex-view-partners
+                                                bitex-view-purseio
                                                 bitex-view-line_of_credit 
                                                 bitex-view-my_broker
                                                 bitex-view-verification">
@@ -728,6 +766,12 @@
           <li id="menu-offerbook">
             <a href="" data-switch-view="offerbook">
               <i data-switch-view="offerbook" class="icon-book"></i> 我的订单</a>
+          </li>
+
+          <li role="presentation" id="menu-partners">
+            <a href="#" data-switch-view="partners">
+              <i class="icon-shopping-cart"></i> Partners
+            </a>
           </li>
 
           <li class="bitex-display-if-non-broker" id="menu-history">
@@ -856,7 +900,7 @@
           
           <a href="" data-switch-view="admin">admin</a> |
           Latency: <span class="bitex-model" data-model-key="latency">0</span> ms |
-          Version: 3f2f8ac |
+          Version: 050eba1 |
           
 		      <a href="http://blinktrade.com/" target="_blank">© 2014 BlinkTrade Inc</a>
           | <a href="#themes">Themes</a>
@@ -875,7 +919,7 @@
         var blinktrade_api = "api.blinktrade.com";
         var symbol = "BTCVEF";
 
-        var remittance_box = { 'BRL':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> BRL',  'BRL', 'BLINK_BTCBRL_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCBRL_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID'  ], ['BRL -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCVEF_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ], ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID'  ] ], 'USD':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ] ], 'VEF':[ ['SurBitcoin',         'VEF', 'BLINK_BTCVEF_BEST_BID / 100000000', 'BLINK_BTCVEF_BEST_ASK / 100000000'  ]  ], 'CLP':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID' ] , ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ] , ['VEF -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCVEF_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCVEF_BEST_BID' ] ], 'PKR':[ ['BitFinexUSD',        'USD', 'BITFINEX_BTCUSD_BEST_BID / 100000000', 'BITFINEX_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> PKR',  'PKR', 'BLINK_BTCPKR_BEST_BID /  BITFINEX_BTCUSD_BEST_ASK', 'BLINK_BTCPKR_BEST_ASK /  BITFINEX_BTCUSD_BEST_BID' ] ] };
+        var remittance_box = { 'BRL':[ ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> BRL',  'BRL', 'BLINK_BTCBRL_BEST_BID /  BITSTAMP_BTCUSD_BEST_ASK', 'BLINK_BTCBRL_BEST_ASK /  BITSTAMP_BTCUSD_BEST_BID'  ], ['BRL -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCVEF_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ], ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID'  ] ], 'USD':[ ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ] ], 'VEF':[ ['SurBitcoin',         'VEF', 'BLINK_BTCVEF_BEST_BID / 100000000', 'BLINK_BTCVEF_BEST_ASK / 100000000'  ]  ], 'CLP':[ ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BITSTAMP_BTCUSD_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BITSTAMP_BTCUSD_BEST_BID' ] , ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ] , ['VEF -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCVEF_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCVEF_BEST_BID' ] ], 'PKR':[ ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> PKR',  'PKR', 'BLINK_BTCPKR_BEST_BID /  BITSTAMP_BTCUSD_BEST_ASK', 'BLINK_BTCPKR_BEST_ASK /  BITSTAMP_BTCUSD_BEST_BID' ] ] };
 
         _app = new BlinkTradeApp(broker_id, remittance_box,  country_code, symbol);
         _app.run(blinktrade_api);
@@ -913,6 +957,8 @@
             type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
     </script>
     <!--End of Zopim Live Chat Script-->
+    
+
     
 
   </body>
