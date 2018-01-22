@@ -38,15 +38,15 @@
   <script type="text/javascript" src="//apis.google.com/js/plusone.js"></script>
 
   
-  <link href="https://surbitcoin.com/vi/assets/themes/default/css/style-new.css?v=6f8f07e" rel="stylesheet">
+  <link href="https://surbitcoin.com/vi/assets/themes/default/css/style-new.css?v=6daab9f" rel="stylesheet">
   <link href="https://surbitcoin.com/vi/assets/css/flag-icon.css" rel="stylesheet">
 
   
-    <link href="https://surbitcoin.com/vi/assets/themes/coinage/sass/main.darkblue.css?v=6f8f07e" rel="stylesheet">
+    <link href="https://surbitcoin.com/vi/assets/themes/coinage/sass/main.darkblue.css?v=6daab9f" rel="stylesheet">
   
 
   <link rel="stylesheet" href="https://surbitcoin.com/vi/assets/themes/coinage/css/font-awesome.min.css">
-  <script data-cfasync="false" src="https://surbitcoin.com/vi/assets/js/bitex_app_blink_trade.compiled.vi.coinage.js?v=6f8f07e" type="text/javascript"></script>
+  <script data-cfasync="false" src="https://surbitcoin.com/vi/assets/js/bitex_app_blink_trade.compiled.vi.coinage.js?v=6daab9f" type="text/javascript"></script>
   <script src="https://surbitcoin.com/vi/assets/themes/coinage/javascript/jquery-1.12.0.min.js"></script>
   <script src="https://surbitcoin.com/vi/assets/themes/coinage/javascript/bootstrap.min.js"></script>
   <script src="https://surbitcoin.com/vi/assets/js/externs/qrcode.min.js"></script>
@@ -57,7 +57,7 @@
 <!-- .head -->
 <header class="head">
     <!-- .head-top -->
-    <div class="head-top">
+    <div class="head-top bitex-model" data-model-key="IsProTrader" style="display: none" data-model-action="show_element">
         <!-- .container-fluid -->
         <div class="container">
             <!-- .head-ticker -->
@@ -192,8 +192,8 @@
           </button>
 
           
-          <a class="navbar-brand" href="#" data-switch-view="offerbook">
-              <img data-switch-view="offerbook" class="logo__img" 
+          <a class="navbar-brand" href="#" data-switch-view="trading">
+              <img data-switch-view="trading" class="logo__img" 
               src="https://surbitcoin.com/vi/assets/exchange_logos/surbitcoin_inverse_toolbar_logo.png"
               style=" height: 30px; margin-top: -5px; ">
           </a>
@@ -2065,9 +2065,6 @@
                 <ul>
                     
                     <li>
-                        <a href="" data-switch-view="admin">admin</a>
-                    </li>
-                    <li>
                         <a href="" data-switch-view="themes">Themes</a>
                     </li>
                     <li>
@@ -2075,7 +2072,7 @@
                     </li>
                     
                     <li>
-                        Version: 6f8f07e
+                        Version: 6daab9f
                     </li>
                     <li>
                         <a href="https://github.com/blinktrade/" target="_blank">Proudly 100% open source <span class="bitex-model" data-model-key="JSVersion"></span></a>
@@ -2135,11 +2132,12 @@
       var country_code = "VE";
       var blinktrade_api = "ws.blinktrade.com";
       var symbol = "BTCVEF";
+      var required_level_to_be_a_pro_trader = 0;
 
       var remittance_box = { 'BRL':[ ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> BRL',  'BRL', 'BLINK_BTCBRL_BEST_BID /  BITSTAMP_BTCUSD_BEST_ASK', 'BLINK_BTCBRL_BEST_ASK /  BITSTAMP_BTCUSD_BEST_BID'  ], ['BRL -> BTC -> VEF',  'VEF', 'BLINK_BTCVEF_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCVEF_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ], ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID'  ] ], 'USD':[ ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ] ], 'VEF':[ ['SurBitcoin',         'VEF', 'BLINK_BTCVEF_BEST_BID / 100000000', 'BLINK_BTCVEF_BEST_ASK / 100000000'  ]  ], 'CLP':[ ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BITSTAMP_BTCUSD_BEST_ASK', 'BLINK_BTCCLP_BEST_ASK /  BITSTAMP_BTCUSD_BEST_BID' ] , ['BRL -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCBRL_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCBRL_BEST_BID' ] , ['VEF -> BTC -> CLP',  'CLP', 'BLINK_BTCCLP_BEST_BID /  BLINK_BTCVEF_BEST_ASK',    'BLINK_BTCCLP_BEST_ASK /  BLINK_BTCVEF_BEST_BID' ] ], 'PKR':[ ['BitStampUSD',        'USD', 'BITSTAMP_BTCUSD_BEST_BID / 100000000', 'BITSTAMP_BTCUSD_BEST_ASK / 100000000'  ], ['USD -> BTC -> PKR',  'PKR', 'BLINK_BTCPKR_BEST_BID /  BITSTAMP_BTCUSD_BEST_ASK', 'BLINK_BTCPKR_BEST_ASK /  BITSTAMP_BTCUSD_BEST_BID' ] ] };
 
       _app = new BlinkTradeApp(broker_id, remittance_box, country_code, symbol);
-      _app.run(blinktrade_api);
+      _app.run(blinktrade_api, required_level_to_be_a_pro_trader);
     })();
   </script>
   
