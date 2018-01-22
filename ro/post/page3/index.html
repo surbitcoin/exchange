@@ -427,7 +427,7 @@
         <!-- /.home-news -->
 
         <!-- .home-orders -->
-        <div class="home-orders">
+        <div class="home-orders" style="display:none">
             <!-- .container -->
             <div class="container">
                 <!-- .home-orders__head -->
@@ -550,9 +550,17 @@
                       <p class="help-block">
                         <a class="login__remember" href="forgot_password" data-switch-view="forgot_password">Ați uitat parola?</a>
                       </p>
+                      <p class="help-block">
+                        <a class="login__remember" href="" id="id_open_second_factor">Has two factor authentication?</a>
+                      </p>
                     </div>
 
-                    <input id="id_btn_login"  class="btn btn-primary btn-block" name="commit" type="submit" value="Autentificare">
+                    <div class="form-group" id="id_second_factor_group" style="display: none">
+                      <label for="id_password">Two factor authentication:</label>
+                      <input class="form-control" id="id_second_factor"  placeholder="" name="secondfactor" type="text">
+                    </div>
+
+                    <input id="id_btn_login"  class="btn btn-primary btn-block btn-login" name="commit" type="submit" value="Autentificare">
                   </form>
                 </div>
                 <!-- /.page__body -->
@@ -583,12 +591,12 @@
                     <form action="" accept-charset="UTF-8" id="new_user" method="post">
                         <div class="form-group">
                           <label for="id_signup_username">Nume utilizator:</label>
-                          <input id="id_signup_username" class="form-control" name="Username" size="30" type="text" placeholder="">
+                          <input autocapitalize="off" autocorrect="off" id="id_signup_username" class="form-control" name="Username" size="30" type="text" placeholder="">
                         </div>
 
                         <div class="form-group">
                           <label for="id_signup_email">Adresa Email:</label>
-                          <input id="id_signup_email" class="form-control" name="Email" size="30" type="text" placeholder="ex.: joe@doe.ro">
+                          <input autocapitalize="off" autocorrect="off" id="id_signup_email" class="form-control" name="Email" size="30" type="email" placeholder="ex.: joe@doe.ro">
                         </div>
 
                         <div class="form-group">
@@ -656,7 +664,7 @@
                   <form accept-charset="UTF-8" action="" method="post">
                       <div class="form-group">
                         <label for="id_forgot_password_email">Email:</label>
-                        <input autocapitalize="off" autocorrect="off" id="id_forgot_password_email" class="form-control" name="email" type="text" placeholder="">
+                        <input autocapitalize="off" autocorrect="off" id="id_forgot_password_email" class="form-control" name="email" type="email" placeholder="">
                       </div>
 
                       <input id="id_btn_forgot_password" class="btn btn-primary btn-block" name="commit" type="submit" value="Recuperează parola">
@@ -730,7 +738,9 @@
         <div class="alert alert-danger | bitex-model" style="display: none" data-model-key="IsAccountBlocked" data-model-action="show_element">
             <div class="container">
                 <button type="button" class="close pull-right" data-dismiss="alert">&times;</button>
-                <a href="" class="alert-link" data-switch-view="faq"> Contul nostru a fost oprit de către administrator, vă rugăm să contactați echipa de suport. </a>
+                
+                  <a href="" class="alert-link" data-switch-view="faq"> Contul nostru a fost oprit de către administrator, vă rugăm să contactați echipa de suport. </a>
+                
             </div>
         </div>
     </div>
@@ -796,7 +806,7 @@
                                   <i class="glyphicon glyphicon-random"></i> Cumpără sau Vinde
                               </a>
                           </li>
-                          <li role="presentation" id="menu-offerbook">
+                          <li role="presentation" id="menu-offerbook" class="bitex-model"  style="display: none" data-model-key="IsProTrader" data-model-action="show_element">
                               <a href="#" data-switch-view="offerbook">
                                   <i class="glyphicon glyphicon-book"></i> Registrul de comenzi
                               </a>
@@ -821,12 +831,19 @@
                                   <i class="fa fa-upload"></i> Retragerile mele
                               </a>
                           </li>
-                          <li role="presentation" id="menu-algotrading">
+
+                          <li role="presentation" id="menu-services" class="bitex-model bitex-display-if-non-broker"  style="display: none" data-model-key="HasServices" data-model-action="show_element">
+                              <a href="#" data-switch-view="services">
+                                  <i class="fa fa-upload"></i> Services
+                              </a>
+                          </li>
+
+                          <li role="presentation" id="menu-algotrading" class="bitex-model"  style="display: none" data-model-key="IsProTrader" data-model-action="show_element">
                               <a href="#" data-switch-view="algotrading">
                                   <i class="glyphicon glyphicon-cog"></i> Algo Trading
                               </a>
                           </li>
-                          <li role="presentation" id="menu-ledger">
+                          <li role="presentation" id="menu-ledger" class="bitex-model"  style="display: none" data-model-key="IsProTrader" data-model-action="show_element">
                               <a href="#" data-switch-view="ledger">
                                   <i class="glyphicon glyphicon-th-list"></i> Registru
                               </a>
@@ -1382,98 +1399,99 @@
   <!-- /#market -->
   <!-- #faq -->
   <div id="faq" class="container bitex-view" style="padding-bottom:42px;display:none">
-      <!-- .page__head -->
-      <header class="page__head">
-          <h1 class="page__title h2 bitex-view-title">
-              <i class="glyphicon glyphicon-question-sign"></i> Întrebări frecvente
-          </h1>
-      </header>
-      <!-- /.page__head -->
+      
+        <!-- .page__head -->
+        <header class="page__head">
+            <h1 class="page__title h2 bitex-view-title">
+                <i class="glyphicon glyphicon-question-sign"></i> Întrebări frecvente
+            </h1>
+        </header>
+        <!-- /.page__head -->
 
-      <!-- .page__body -->
-      <div class="page__body bitex-view-content">
-          <!-- .panel-group -->
-          <div class="panel-group accordion" id="accordion">
-              
-              <div class="panel panel-default accordion-group">
-                <div class="panel-heading accordion-heading">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#Ce este Bitcoin? ">
-                        Ce este Bitcoin?
-                    </a>
-                  </h4>
-                </div>
-                <div id="Ce este Bitcoin?" class="panel-collapse accordion-body collapse">
-                  <div class="panel-body">
-                       <p>Bitcoin este o rețea open source, peer2peer, digitală creată în 2009 de către autorul pseudoanonim Satoshi Nakamoto. Protocolul permite utilizatorilor să trimită, păstreze și primească valoare, la costuri semnificativ mai mici și într-un interval de timp scurt. Bitcoin elimină nevoia de o autoritate centrală.</p>
+        <!-- .page__body -->
+        <div class="page__body bitex-view-content">
+            <!-- .panel-group -->
+            <div class="panel-group accordion" id="accordion">
+                
+                <div class="panel panel-default accordion-group">
+                  <div class="panel-heading accordion-heading">
+                  <h4 class="panel-title">
+                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#Ce este Bitcoin? ">
+                          Ce este Bitcoin?
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="Ce este Bitcoin?" class="panel-collapse accordion-body collapse">
+                    <div class="panel-body">
+                        <p>Bitcoin este o rețea open source, peer2peer, digitală creată în 2009 de către autorul pseudoanonim Satoshi Nakamoto. Protocolul permite utilizatorilor să trimită, păstreze și primească valoare, la costuri semnificativ mai mici și într-un interval de timp scurt. Bitcoin elimină nevoia de o autoritate centrală.</p>
 
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <div class="panel panel-default accordion-group">
-                <div class="panel-heading accordion-heading">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#Exchange-ul cumpără/vinde Bitcoin direct? ">
-                        Exchange-ul cumpără/vinde Bitcoin direct?
-                    </a>
-                  </h4>
-                </div>
-                <div id="Exchange-ul cumpără/vinde Bitcoin direct?" class="panel-collapse accordion-body collapse">
-                  <div class="panel-body">
-                       <p>Nu. Noi oferim un serviciu. Gândiți-va la exchange ca eBay, noi doar oferim un serviciu unde puteți găsii vânzători sau cumpărători.</p>
+                
+                <div class="panel panel-default accordion-group">
+                  <div class="panel-heading accordion-heading">
+                  <h4 class="panel-title">
+                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#Exchange-ul cumpără/vinde Bitcoin direct? ">
+                          Exchange-ul cumpără/vinde Bitcoin direct?
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="Exchange-ul cumpără/vinde Bitcoin direct?" class="panel-collapse accordion-body collapse">
+                    <div class="panel-body">
+                        <p>Nu. Noi oferim un serviciu. Gândiți-va la exchange ca eBay, noi doar oferim un serviciu unde puteți găsii vânzători sau cumpărători.</p>
 
 <p>Tot ceea ce facem este să oferim un mediu sigur și simplu pentru a tranzacționa cu alți utilizatori.</p>
 
 <p>Noi garantăm că cumpărătorul primește Bitcoini și vânzătorul banii, la prețul stabilit.</p>
 
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <div class="panel panel-default accordion-group">
-                <div class="panel-heading accordion-heading">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#Cum pot devenii trader? ">
-                        Cum pot devenii trader?
-                    </a>
-                  </h4>
-                </div>
-                <div id="Cum pot devenii trader?" class="panel-collapse accordion-body collapse">
-                  <div class="panel-body">
-                       <p>Deschiderea unui cont de tranzactionare la Exchange este ușor, rapid și gratuit. Faceți clic pe “Înregistrează-te”, completați formularul și conectați-vă.  După ce vă conectați, operatorul Exchange-ul vă va cere numele, adresa și documente. După ce documentele au fost verificate de operator, veți putea cumpără/vinde Bitcoin.</p>
+                
+                <div class="panel panel-default accordion-group">
+                  <div class="panel-heading accordion-heading">
+                  <h4 class="panel-title">
+                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#Cum pot devenii trader? ">
+                          Cum pot devenii trader?
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="Cum pot devenii trader?" class="panel-collapse accordion-body collapse">
+                    <div class="panel-body">
+                        <p>Deschiderea unui cont de tranzactionare la Exchange este ușor, rapid și gratuit. Faceți clic pe “Înregistrează-te”, completați formularul și conectați-vă.  După ce vă conectați, operatorul Exchange-ul vă va cere numele, adresa și documente. După ce documentele au fost verificate de operator, veți putea cumpără/vinde Bitcoin.</p>
 
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <div class="panel panel-default accordion-group">
-                <div class="panel-heading accordion-heading">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#Cum depozitez bani(fiat) în contul meu? ">
-                        Cum depozitez bani(fiat) în contul meu?
-                    </a>
-                  </h4>
-                </div>
-                <div id="Cum depozitez bani(fiat) în contul meu?" class="panel-collapse accordion-body collapse">
-                  <div class="panel-body">
-                       <p>În meniul principal, apăsați pe “Depozit monedă locală” și va apărea o fereastră nouă. You will have to specify the amount of FIAT you want to deposit in order to buy bitcoins. Va trebui să specificați cantitatea de FIAT pe care doriți să o depozitați, pentru a cumpără Bitcoin. Țineți cont că există taxă de depozitare. Pentru o depozitare de 800 lei cu o taxa de 1.5%, veți avea 788 lei creditați către contul dumneavoastră.</p>
+                
+                <div class="panel panel-default accordion-group">
+                  <div class="panel-heading accordion-heading">
+                  <h4 class="panel-title">
+                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#Cum depozitez bani(fiat) în contul meu? ">
+                          Cum depozitez bani(fiat) în contul meu?
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="Cum depozitez bani(fiat) în contul meu?" class="panel-collapse accordion-body collapse">
+                    <div class="panel-body">
+                        <p>În meniul principal, apăsați pe “Depozit monedă locală” și va apărea o fereastră nouă. You will have to specify the amount of FIAT you want to deposit in order to buy bitcoins. Va trebui să specificați cantitatea de FIAT pe care doriți să o depozitați, pentru a cumpără Bitcoin. Țineți cont că există taxă de depozitare. Pentru o depozitare de 800 lei cu o taxa de 1.5%, veți avea 788 lei creditați către contul dumneavoastră.</p>
 
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <div class="panel panel-default accordion-group">
-                <div class="panel-heading accordion-heading">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#Sunt Bitcoinii mei în siguranță? ">
-                        Sunt Bitcoinii mei în siguranță?
-                    </a>
-                  </h4>
-                </div>
-                <div id="Sunt Bitcoinii mei în siguranță?" class="panel-collapse accordion-body collapse">
-                  <div class="panel-body">
-                       <p>Scopul nostru principal este de a oferii trader-ilor un mediu sigur în care să interacționeze. Bitcoinii sunt stocani într-un portofel rece cu semnături multiple (multisignature cold storage wallet). Chiar dacă server-ul sau exchange-ul ar fi compromise Bitcoinii nu pot ajunge la băieții răi.</p>
+                
+                <div class="panel panel-default accordion-group">
+                  <div class="panel-heading accordion-heading">
+                  <h4 class="panel-title">
+                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#Sunt Bitcoinii mei în siguranță? ">
+                          Sunt Bitcoinii mei în siguranță?
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="Sunt Bitcoinii mei în siguranță?" class="panel-collapse accordion-body collapse">
+                    <div class="panel-body">
+                        <p>Scopul nostru principal este de a oferii trader-ilor un mediu sigur în care să interacționeze. Bitcoinii sunt stocani într-un portofel rece cu semnături multiple (multisignature cold storage wallet). Chiar dacă server-ul sau exchange-ul ar fi compromise Bitcoinii nu pot ajunge la băieții răi.</p>
 
 <p>Portofelul cu semnături multiple(multisignature) necesită 2 din 3 semnături pentru a muta Bitcoinii. Operatorul exchange-ului deține una din cele 3 chei. Celelalte două sunt deținute de BlinkTrade și un mediator, care va lua parte la proces, în cazul în care ar exista o dispută între operator și BlinkTrade.</p>
 
@@ -1489,34 +1507,35 @@ Mai mult, toate măsurile de siguranță ale portofelelor calde sunt întreținu
 
 <p>Încurajăm toți utilizatori să își depoziteze Bitcoinii doar când au de gând să îi schimbe, și să nu folosească exchange-ul că o bancă. Cea mai sigură metodă este să va țineți Bitcoini în portofelul personal până când aveți de gând să îi schimbați.</p>
 
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <div class="panel panel-default accordion-group">
-                <div class="panel-heading accordion-heading">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#De ce nu am o cheie privată a portofelului meu din exchange? ">
-                        De ce nu am o cheie privată a portofelului meu din exchange?
-                    </a>
-                  </h4>
-                </div>
-                <div id="De ce nu am o cheie privată a portofelului meu din exchange?" class="panel-collapse accordion-body collapse">
-                  <div class="panel-body">
-                       <p>Principiul nostru este că Bitcoinii sunt depozitați în exchange pentru a fi schimbați în monedă locală. În consecință pentru a garanta siguranța și viteza tranzacționării, operatorul exchange-ului are posesia depozitărilor fie în Fiat sau BTC.</p>
+                
+                <div class="panel panel-default accordion-group">
+                  <div class="panel-heading accordion-heading">
+                  <h4 class="panel-title">
+                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#De ce nu am o cheie privată a portofelului meu din exchange? ">
+                          De ce nu am o cheie privată a portofelului meu din exchange?
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="De ce nu am o cheie privată a portofelului meu din exchange?" class="panel-collapse accordion-body collapse">
+                    <div class="panel-body">
+                        <p>Principiul nostru este că Bitcoinii sunt depozitați în exchange pentru a fi schimbați în monedă locală. În consecință pentru a garanta siguranța și viteza tranzacționării, operatorul exchange-ului are posesia depozitărilor fie în Fiat sau BTC.</p>
 
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-          </div>
-          <!-- /.panel-group -->
+                
+            </div>
+            <!-- /.panel-group -->
 
-          <a href="" class="bitex-support-link" target="_blank">
-              <i class="glyphicon glyphicon-envelope"></i> Contactati-ne în cazul în care nu ați găsit răspunsul la întrebările dumneavoastră.
-          </a>
-      </div>
-      <!-- /.page__body -->
+            <a href="" class="bitex-support-link" target="_blank">
+                <i class="glyphicon glyphicon-envelope"></i> Contactati-ne în cazul în care nu ați găsit răspunsul la întrebările dumneavoastră.
+            </a>
+        </div>
+        <!-- /.page__body -->
+      
   </div>
   <!-- /#faq -->
 
@@ -1546,14 +1565,6 @@ Mai mult, toate măsurile de siguranță ale portofelelor calde sunt întreținu
                             <div class="thumb-theme">
                                 <img src="https://surbitcoin.com/ro/assets/exchange_logos/thumb-themes/surbitcoin-default-thumb.jpg" alt="Default Theme">
                                 <h3 class="ls-title-4">Simple Theme</h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-4">
-                        <a href="https://surbitcoin.com/ro/themes/whitedev/">
-                            <div class="thumb-theme">
-                                <img src="https://surbitcoin.com/ro/assets/exchange_logos/thumb-themes/surbitcoin-whitedev-thumb.jpg" alt="Whitedev Theme">
-                                <h3 class="ls-title-4">Whitedev</h3>
                             </div>
                         </a>
                     </div>
