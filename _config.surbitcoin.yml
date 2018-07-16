@@ -2,7 +2,7 @@
 url: "https://surbitcoin.com"
 author: "BlinkTrade"
 baseurl: ""
-deploy_version: "050eba1"
+deploy_version: "0196378"
 
 exchange: "surbitcoin"
 exchange_logo: "surbitcoin"
